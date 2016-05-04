@@ -25,7 +25,6 @@
         }
     ],
     "require": {
-        "silverstripe/cms": ">=3.0",
-        "simeydotme/jQuery-ui-Slider-Pips": "master"
+        "silverstripe/cms": ">=3.0"
     }
 }
