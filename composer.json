@@ -13,6 +13,7 @@
         }
     ],
     "require": {
-        "silverstripe/cms": ">=3.0"
+        "silverstripe/cms": ">=3.0",
+        "jquery/jquery-ui": "1-11-stable"
     }
 }
