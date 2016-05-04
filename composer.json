@@ -17,11 +17,11 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/Spambanjo/silverstripe-jqueryui-fields.git"
+            "url": "git@github.com:silverstripe-jqueryui-fields.git"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/simeydotme/jQuery-ui-Slider-Pips.git"
+            "url": "git@github.com:simeydotme/jQuery-ui-Slider-Pips.git"
         }
     ],
     "require": {
