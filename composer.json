@@ -21,6 +21,7 @@
         }
     ],
     "require": {
-        "silverstripe/cms": ">=3.0"
+        "silverstripe/cms": ">=3.0",
+        "components/jqueryui": "dev-master"
     }
 }
