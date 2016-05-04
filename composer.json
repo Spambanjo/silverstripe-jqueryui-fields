@@ -15,14 +15,6 @@
         }
     ],
     "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:silverstripe-jqueryui-fields.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:simeydotme/jQuery-ui-Slider-Pips.git"
-        }
     ],
     "require": {
         "silverstripe/cms": ">=3.0"
