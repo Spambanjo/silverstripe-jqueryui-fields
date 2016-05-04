@@ -1,0 +1,22 @@
+{
+	"name": "Spambanjo/silverstripe-jqueryui-fields",
+	"type": "silverstripe-module",
+	"description": "jQueryUI fields for SilverStripe 3",
+	"homepage": "https://github.com/Spambanjo/silverstripe-jqueryui-fields",
+	"keywords": ["silverstripe", "jquery ui", "ui fields"],
+	"license": "GNU",
+	"authors": [{
+			"name": "Rob Sheldrake",
+			"homepage": "http://www.robsheldrake.com/"
+    },{
+      "name": "GitHub contributors",
+      "homepage": "https://github.com/Spambanjo/silverstripe-jqueryui-fields/graphs/contributors"
+  }],
+  "repositories": [{
+    "type": "vcs",
+    "url": "git@github.com:Spambanjo/silverstripe-jqueryui-fields.git"
+  }],
+	"require": {
+    "silverstripe/cms": ">=3.0"
+	}
+}
