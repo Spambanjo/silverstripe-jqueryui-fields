@@ -13,14 +13,13 @@
         }
     ],
     "require": {
-        "silverstripe/cms": ">=3.0",
-        "jquery/jquery-ui": "1-10-stable"
+        "silverstripe/cms": ">=3.0"
     },
     "repositories": [
         {
             "type": "git",
             "name": "jquery/jquery-ui",
-            "url": "https://github.com/jquery/jquery-ui"
+            "url": "https://github.com/jquery/jquery-ui/tree/1-10-stable"
         }
     ]
 }
