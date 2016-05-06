@@ -21,8 +21,10 @@
             "require": {
                 "jquery-ui-slider-pips": "master"
             },
-            "asset-installer-paths": {
-                "jquery-ui-slider-pips": "web/assets/vendor"
+            "extra": {
+                "asset-installer-paths": {
+                    "jquery-ui-slider-pips": "web/assets/vendor"
+                }
             }
         }
     }
