@@ -11,6 +11,7 @@ class JqueryUISliderField extends DropdownField {
     }
     
     public function getAttributes(){
+        
         // load the more recent version of jquery and jquery UI
         Requirements::javascript('vendor/components/jquery/jquery.min.js');
         Requirements::javascript('vendor/components/jqueryui/jquery-ui.min.js');
