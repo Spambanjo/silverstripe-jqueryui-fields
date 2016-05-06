@@ -20,11 +20,6 @@
         "bower": {
             "require": {
                 "jquery-ui-slider-pips": "master"
-            },
-            "extra": {
-                "asset-installer-paths": {
-                    "jquery-ui-slider-pips": "web/assets/vendor"
-                }
             }
         }
     }
