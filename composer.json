@@ -21,7 +21,7 @@
             "require": {
                 "jquery-ui-slider-pips": "master"
             },
-            "directory": "vendor/bower_components",
+            "directory": "silverstripe-jqueryui-fields-vendor/bower_components",
             "scripts": {
                 "post-update-cmd": "Namespace\\Class::method or command --with args"
             }
