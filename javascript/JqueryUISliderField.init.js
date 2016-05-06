@@ -1,23 +1,36 @@
 $(document).ready(function(){
+    var fldtype = 'select';
     $('.field.jqueryuislider').each(function(){
-        sel = $(this).find('select');
-        steps = $.parseJSON(sel.attr('data-slider-values'));
+        fld = $(this).find(fldtype);
+        fld.hide();
+        steps = $.parseJSON(fld.attr('data-slider-values'));
         keymap = [];
+        labelmap = [];
+        fldval = 0;
         for(key in steps){
             keymap[keymap.length] = key;
+            if(key==fld.attr('data-slider-value')){
+                fldval = keymap.length-1;
+            }
+            labelmap[labelmap.length] = steps[key];
         }
-        sel.attr('data-jqueryslider-keymap',JSON.stringify(keymap));
+        fld.attr('data-jqueryslider-keymap',JSON.stringify(keymap));
         el = $('<div></div>');
         $(this).find('.middleColumn').append(el);
         el.slider({
             'min' : 0,
-            'max' : Object.keys(steps).length-1,
+            'max' : Object.keys(keymap).length-1,
             'step' : 1,
-            'slide' : function(event, ui){
-                sel = $(this).parent().find('select');
-                steps = $.parseJSON(sel.attr('data-jqueryslider-keymap'));
-                sel.val(steps[ui.value]);
-            }
+            'value' : fldval
+        })
+        .slider('pips',{
+            'rest' : 'label',
+            'labels' : labelmap
+        })
+        .on("slidechange", function(e,ui) {
+            fld = $(this).parent().find(fldtype);
+            steps = $.parseJSON(fld.attr('data-jqueryslider-keymap'));
+            fld.val(keymap[ui.value]);
         });
     });
 });

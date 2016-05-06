@@ -14,7 +14,17 @@
     ],
     "require": {
         "silverstripe/cms": ">=3.0",
-        "components/jqueryui" : "dev-master",
-        "fxp/composer-asset-plugin": "dev-master"
+        "php-kit/composer-bower-plugin": "dev-master"
+    },
+    "extra": {
+        "bower": {
+            "require": {
+                "jquery-ui-slider-pips": "master"
+            },
+            "directory": "vendor/bower_components",
+            "scripts": {
+                "post-update-cmd": "Namespace\\Class::method or command --with args"
+            }
+        }
     }
 }
