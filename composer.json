@@ -21,9 +21,8 @@
             "require": {
                 "jquery-ui-slider-pips": "master"
             },
-            "directory": "silverstripe-jqueryui-fields-vendor/bower_components",
-            "scripts": {
-                "post-update-cmd": "Namespace\\Class::method or command --with args"
+            "asset-installer-paths": {
+                "jquery-ui-slider-pips": "web/assets/vendor"
             }
         }
     }
