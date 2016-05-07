@@ -1,4 +1,32 @@
-
 .field.jqueryuislider select {
-    display:block;
+    display:none;
+}
+.field.jqueryuislider .ui-slider-pip,
+.field.jqueryuislider .ui-slider-pips:not(.ui-slider-disabled) .ui-slider-pip:hover .ui-slider-label {
+    font-weight:normal;
+}
+.field.jqueryuislider .ui-slider-pip .ui-slider-label {
+    left:50%;
+    margin-left:0;
+    width:auto;
+}
+.field.jqueryuislider .ui-slider-pip-first .ui-slider-line {
+    margin-left:3px;
+}
+.field.jqueryuislider .ui-slider-pip-first .ui-slider-label {
+    left:50%;
+    margin-left:0;
+    text-align:left;
+}
+.field.jqueryuislider .ui-slider-pip-last .ui-slider-line {
+    margin-left:-3px;
+}
+.field.jqueryuislider .ui-slider-pip-last .ui-slider-label {
+    left:auto;
+    right:50%;
+    width:auto;
+    text-align:right;
+}
+.field.jqueryuislider .ui-widget-content {
+    border-color:#D3D3D3;
 }

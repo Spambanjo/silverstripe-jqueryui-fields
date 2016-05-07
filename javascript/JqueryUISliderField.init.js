@@ -2,7 +2,6 @@ $(document).ready(function(){
     var fldtype = 'select';
     $('.field.jqueryuislider').each(function(){
         fld = $(this).find(fldtype);
-        fld.hide();
         steps = $.parseJSON(fld.attr('data-slider-values'));
         keymap = [];
         labelmap = [];
@@ -21,7 +20,8 @@ $(document).ready(function(){
             'min' : 0,
             'max' : Object.keys(keymap).length-1,
             'step' : 1,
-            'value' : fldval
+            'value' : fldval,
+            'line-height' : '1em'
         })
         .slider('pips',{
             'rest' : 'label',
@@ -31,6 +31,23 @@ $(document).ready(function(){
             fld = $(this).parent().find(fldtype);
             steps = $.parseJSON(fld.attr('data-jqueryslider-keymap'));
             fld.val(keymap[ui.value]);
+        });
+        // fix middle labels
+        $(this).find('.ui-slider-pip:not(.ui-slider-pip-first):not(.ui-slider-pip-last) .ui-slider-label').each(function(){
+            $(this).css({
+                'margin-left' : 0-($(this).width()/2)
+            });
+        });
+        // add bottom-padding to middlecol
+        var tallest = 0;
+        $(this).find('.ui-slider-pip .ui-slider-label').each(function(){
+            if($(this).height()>tallest){
+                tallest = parseFloat($(this).height());
+            }
+        });
+        //alert(tallest);
+        $(this).find('.middleColumn').css({
+            'padding-bottom' : tallest-6
         });
     });
 });
