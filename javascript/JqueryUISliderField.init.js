@@ -1,7 +1,7 @@
 $(document).ready(function(){
-    var fldtype = 'select';
+    var jqueryuislider_fldtype = 'select';
     $('.field.jqueryuislider').each(function(){
-        fld = $(this).find(fldtype);
+        fld = $(this).find(jqueryuislider_fldtype);
         steps = $.parseJSON(fld.attr('data-slider-values'));
         keymap = [];
         labelmap = [];
@@ -17,18 +17,15 @@ $(document).ready(function(){
         el = $('<div></div>');
         $(this).find('.middleColumn').append(el);
         el.slider({
-            'min' : 0,
             'max' : Object.keys(keymap).length-1,
-            'step' : 1,
-            'value' : fldval,
-            'line-height' : '1em'
+            'value' : fldval
         })
         .slider('pips',{
             'rest' : 'label',
             'labels' : labelmap
         })
         .on("slidechange", function(e,ui) {
-            fld = $(this).parent().find(fldtype);
+            fld = $(this).parent().find(jqueryuislider_fldtype);
             steps = $.parseJSON(fld.attr('data-jqueryslider-keymap'));
             fld.val(keymap[ui.value]);
         });
